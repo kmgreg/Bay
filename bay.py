@@ -10,6 +10,7 @@ def evaluate(x,l,m):
 
 
 print(evaluate(5,.9,3))
-c = np.arrange(-5, 5, .1)
-plt.plot(c,evaluate(c,.9,3))
+ne = np.vectorize(evaluate)
+c = np.arange(-5,5, 0.05)
+plt.plot(c,ne(c,.9,3))
 plt.show()
